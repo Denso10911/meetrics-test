@@ -55,7 +55,7 @@ const FeedbackItem: React.FC<Props> = ({ feedback }) => {
             </IconButton>
           </Stack>
 
-          <Link href="#" underline="hover" fontSize={14}>
+          <Link href="#" underline="hover" fontSize={14} color="primary">
             Didn’t Attend
           </Link>
         </Stack>

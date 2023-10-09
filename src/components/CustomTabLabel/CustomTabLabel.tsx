@@ -14,7 +14,7 @@ const CustomTabLabel: React.FC<Props> = ({ isActive, label, count }) => {
         fontSize={14}
         sx={{
           fontWeight: isActive ? 600 : 500,
-          color: isActive ? "#1770E5" : "#636363",
+          color: isActive ? "primary" : "#636363",
         }}
       >
         {label}
@@ -25,13 +25,14 @@ const CustomTabLabel: React.FC<Props> = ({ isActive, label, count }) => {
         alignItems="center"
         width={14}
         height={14}
-        fontSize={12}
         borderRadius="2px"
         sx={{
           backgroundColor: "#EBF3FF",
         }}
       >
-        {count}
+        <Typography color="primary" fontSize={12}>
+          {count}
+        </Typography>
       </Box>
     </Stack>
   )

@@ -19,7 +19,7 @@ const FeedbackList: React.FC<Props> = ({ feedbacks = mockFeedbacks }) => {
           justifyContent="center"
           alignItems="center"
           borderRadius="2px"
-          color="#1770E5"
+          color="primary"
           sx={{
             backgroundColor: "#EBF3FF",
           }}

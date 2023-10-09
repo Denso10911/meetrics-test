@@ -10,6 +10,11 @@ const ThemeLayout: React.FC<Props> = ({ children }) => {
     typography: {
       fontFamily: ["Manrope", "sans-serif"].join(","),
     },
+    palette: {
+      primary: {
+        main: "#1770E5",
+      },
+    },
   })
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>
 }

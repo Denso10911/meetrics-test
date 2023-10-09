@@ -19,7 +19,7 @@ const CircularProgressWithLabel: React.FC<Props> = ({ value }) => {
       <CircularProgress
         variant="determinate"
         sx={{
-          color: theme => theme.palette.grey[theme.palette.mode === "light" ? 200 : 800],
+          color: "#F3F3F3",
         }}
         size={100}
         value={100}
@@ -28,7 +28,7 @@ const CircularProgressWithLabel: React.FC<Props> = ({ value }) => {
         variant="determinate"
         value={Number(loadedValue)}
         sx={{
-          color: theme => (theme.palette.mode === "light" ? "#1a90ff" : "#308fe8"),
+          color: "primary",
           position: "absolute",
           left: 0,
           [`& .${circularProgressClasses.circle}`]: {
