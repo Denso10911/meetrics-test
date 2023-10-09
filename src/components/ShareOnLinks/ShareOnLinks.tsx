@@ -1,19 +1,13 @@
 import React from "react"
-import { Box, Stack, Typography, IconButton } from "@mui/material"
+import { Box, Stack, Typography } from "@mui/material"
 import TwitterIcon from "@mui/icons-material/Twitter"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined"
+import { FacebookShareButton, LinkedinShareButton, TwitterShareButton } from "react-share"
 
 const ShareOnLinks = () => {
-  const links = [
-    { id: 1, icon: <TwitterIcon fontSize="small" sx={{ color: "#4F4F4F" }} /> },
-    { id: 2, icon: <LinkedInIcon fontSize="small" sx={{ color: "#4F4F4F" }} /> },
-    { id: 3, icon: <FacebookOutlinedIcon fontSize="small" sx={{ color: "#4F4F4F" }} /> },
-  ]
+  const shareUrl = `https://meetrics.com/`
 
-  const handleLinkClick = () => {
-    console.log("share with react-share")
-  }
   return (
     <Stack
       sx={{
@@ -38,11 +32,15 @@ const ShareOnLinks = () => {
           gap: "10px",
         }}
       >
-        {links.map(el => (
-          <IconButton aria-label="negative" onClick={handleLinkClick} sx={{ p: 0 }}>
-            {el.icon}
-          </IconButton>
-        ))}
+        <TwitterShareButton url={shareUrl} title="meetrics">
+          <TwitterIcon fontSize="small" sx={{ color: "#4F4F4F" }} />
+        </TwitterShareButton>
+        <LinkedinShareButton url={shareUrl}>
+          <LinkedInIcon fontSize="small" sx={{ color: "#4F4F4F" }} />
+        </LinkedinShareButton>
+        <FacebookShareButton url={shareUrl} quote="meetrics" hashtag="meetrics">
+          <FacebookOutlinedIcon fontSize="small" sx={{ color: "#4F4F4F" }} />
+        </FacebookShareButton>
       </Box>
     </Stack>
   )

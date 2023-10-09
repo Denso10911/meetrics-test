@@ -6,7 +6,7 @@ import ThemeLayout from "./layouts/ThemeLayout"
 const App = () => {
   return (
     <ThemeLayout>
-      <Stack sx={{ backgroundColor: "#ffffff", maxWidth: 350, height: 1000 }}>
+      <Stack sx={{ backgroundColor: "#ffffff", width: 350, height: 1000 }}>
         <Logo />
         <MeetricsTabs />
         <Footer />

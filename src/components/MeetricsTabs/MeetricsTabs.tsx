@@ -5,6 +5,7 @@ import PostMeeting from "../PostMeeting"
 import PreMeeting from "../PreMeeting"
 import CustomTabPanel from "../CustomTabPanel"
 import CustomTabLabel from "../CustomTabLabel"
+import { feedbacksMock } from "../../mockData"
 
 function a11yProps(index: number) {
   return {
@@ -23,7 +24,12 @@ const MeetricsTabs = () => {
 
   const tabs = useMemo(
     () => [
-      { id: 0, label: "Dashboard", count: 1, tabPanel: <Dashboard /> },
+      {
+        id: 0,
+        label: "Dashboard",
+        count: feedbacksMock.length,
+        tabPanel: <Dashboard feedbacks={feedbacksMock} />,
+      },
       { id: 1, label: "Pre Meeting", count: 1, tabPanel: <PostMeeting /> },
       { id: 2, label: "Post Meeting", count: 1, tabPanel: <PreMeeting /> },
     ],

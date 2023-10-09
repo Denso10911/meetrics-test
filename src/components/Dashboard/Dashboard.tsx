@@ -6,9 +6,11 @@ import FeedbackList from "../FeedbackList"
 import { feedbacksMock, statMock } from "../../mockData"
 import CircularProgressWithLabel from "../CircularProgressWithLabel"
 
-interface Props {}
+interface Props {
+  feedbacks: unknown[]
+}
 
-const Dashboard: React.FC<Props> = () => {
+const Dashboard: React.FC<Props> = ({ feedbacks }) => {
   const statList = [
     { id: 1, value: statMock.total, label: "of meetings eliminated" },
     { id: 2, value: statMock.improved, label: "of meetings improved" },
@@ -56,6 +58,7 @@ const Dashboard: React.FC<Props> = () => {
         <Stack direction="row">
           {statList.map(el => (
             <Box
+              key={el.id}
               sx={{
                 justifyContent: "center",
                 textAlign: "center",
@@ -95,7 +98,7 @@ const Dashboard: React.FC<Props> = () => {
         </Stack>
         <ShareOnLinks />
       </ContentBox>
-      <FeedbackList feedbacks={feedbacksMock} />
+      <FeedbackList feedbacks={feedbacks} />
     </Box>
   )
 }

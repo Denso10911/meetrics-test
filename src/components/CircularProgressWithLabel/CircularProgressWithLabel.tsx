@@ -1,11 +1,19 @@
 import React from "react"
 import { Box, CircularProgress, circularProgressClasses, Typography } from "@mui/material"
+import { useCountUp } from "use-count-up"
 
 interface Props {
   value: number
 }
 
 const CircularProgressWithLabel: React.FC<Props> = ({ value }) => {
+  const { value: loadedValue } = useCountUp({
+    isCounting: true,
+    duration: 0.5,
+    start: 0,
+    end: value,
+  })
+
   return (
     <Box position="relative" display="inline-flex">
       <CircularProgress
@@ -14,13 +22,11 @@ const CircularProgressWithLabel: React.FC<Props> = ({ value }) => {
           color: theme => theme.palette.grey[theme.palette.mode === "light" ? 200 : 800],
         }}
         size={100}
-        thickness={4}
         value={100}
       />
       <CircularProgress
         variant="determinate"
-        value={value}
-        disableShrink
+        value={Number(loadedValue)}
         sx={{
           color: theme => (theme.palette.mode === "light" ? "#1a90ff" : "#308fe8"),
           position: "absolute",
@@ -30,7 +36,6 @@ const CircularProgressWithLabel: React.FC<Props> = ({ value }) => {
           },
         }}
         size={100}
-        thickness={4}
       />
       <Box
         top={0}
@@ -42,7 +47,7 @@ const CircularProgressWithLabel: React.FC<Props> = ({ value }) => {
         alignItems="center"
         justifyContent="center"
       >
-        <Typography fontSize="32px">{`${Math.round(value)}`}</Typography>
+        <Typography fontSize="32px">{`${Math.round(loadedValue)}`}</Typography>
       </Box>
     </Box>
   )

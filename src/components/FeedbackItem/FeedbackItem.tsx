@@ -21,7 +21,6 @@ const FeedbackItem: React.FC<Props> = ({ feedback }) => {
     }
   }
 
-  console.log(selectedFeedback, "selectedFeedback")
   return (
     <ContentBox>
       <Stack direction="row" gap="30px">
