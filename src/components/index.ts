@@ -1,7 +1,7 @@
 export { default as CustomTabLabel } from "./CustomTabLabel"
 export { default as CustomTabPanel } from "./CustomTabPanel"
 export { default as Dashboard } from "./Dashboard"
-export { default as Logo } from "./Logo"
+export { default as Header } from "./Header"
 export { default as PostMeeting } from "./PostMeeting"
 export { default as PreMeeting } from "./PreMeeting"
 export { default as ContentBox } from "./ContentBox"

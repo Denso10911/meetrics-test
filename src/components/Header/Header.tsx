@@ -1,7 +1,7 @@
 import { Avatar, Stack } from "@mui/material"
 import logo from "../../assets/logo.png"
 
-const Logo = () => {
+const Header = () => {
   return (
     <Stack
       sx={{
@@ -21,4 +21,4 @@ const Logo = () => {
   )
 }
 
-export default Logo
+export default Header
