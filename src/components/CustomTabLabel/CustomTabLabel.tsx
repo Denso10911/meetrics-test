@@ -27,7 +27,7 @@ const CustomTabLabel: React.FC<Props> = ({ isActive, label, count }) => {
         height={14}
         borderRadius="2px"
         sx={{
-          backgroundColor: "#EBF3FF",
+          backgroundColor: "primary.light",
         }}
       >
         <Typography color="primary" fontSize={12}>

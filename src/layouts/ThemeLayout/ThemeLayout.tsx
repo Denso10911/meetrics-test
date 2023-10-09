@@ -13,6 +13,7 @@ const ThemeLayout: React.FC<Props> = ({ children }) => {
     palette: {
       primary: {
         main: "#1770E5",
+        light: "#EBF3FF",
       },
     },
   })

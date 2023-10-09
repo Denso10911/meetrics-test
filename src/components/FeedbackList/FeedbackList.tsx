@@ -19,12 +19,11 @@ const FeedbackList: React.FC<Props> = ({ feedbacks = mockFeedbacks }) => {
           justifyContent="center"
           alignItems="center"
           borderRadius="2px"
-          color="primary"
           sx={{
-            backgroundColor: "#EBF3FF",
+            backgroundColor: "primary.light",
           }}
         >
-          {feedbacks?.length || 2}
+          <Typography color="primary">{feedbacks?.length || 2}</Typography>
         </Box>
       </Stack>
       <Stack gap="12px">
